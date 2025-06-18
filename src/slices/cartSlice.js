@@ -16,7 +16,7 @@ const cartSlice = createSlice({
     reducers:{
         addToCart: (state,action) => {
             const course = action.payload;
-            const index = state.cart.findIndex((item) => item._id === course);
+            const index = state.cart.findIndex((item) => item._id === course._id);
 
             if(index >= 0){
                 // show toast
@@ -39,7 +39,7 @@ const cartSlice = createSlice({
             console.log("Hello brother",action.payload)
             const course = action.payload;
             console.log("Hello is ", course._id)
-            const index = state.cart.findIndex((item) => item._id === course._id);
+            const index = state.cart.findIndex((item) => item._id === course);
 
             console.log("Hello : ",index)
             if(index >= 0){
