@@ -16,7 +16,7 @@ const cartSlice = createSlice({
     reducers:{
         addToCart: (state,action) => {
             const course = action.payload;
-            const index = state.cart.findIndex((item) => item._id === course._id);
+            const index = state.cart.findIndex((item) => item._id === course);
 
             if(index >= 0){
                 // show toast
