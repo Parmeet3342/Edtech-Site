@@ -40,7 +40,6 @@ function SignupForm() {
   // Handle Form Submission
   const handleOnSubmit = (e) => {
     e.preventDefault()
-    toast.success('submit called')
 
     if (password !== confirmPassword) {
       toast.error("Passwords Do Not Match")
@@ -55,9 +54,7 @@ function SignupForm() {
     // To be used after otp verification
     dispatch(setSignupData(signupData))
     // Send OTP to user for verification
-    toast.success("OTP sent")
     dispatch(sendOTP(formData.email, navigate))
-    toast.success("OTP received")
 
     // Reset
     setFormData({
