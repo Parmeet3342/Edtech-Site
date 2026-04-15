@@ -54,7 +54,9 @@ function SignupForm() {
     // To be used after otp verification
     dispatch(setSignupData(signupData))
     // Send OTP to user for verification
+    toast.success("OTP sent")
     dispatch(sendOTP(formData.email, navigate))
+    toast.success("OTP received")
 
     // Reset
     setFormData({
