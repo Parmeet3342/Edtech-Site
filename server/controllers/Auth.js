@@ -6,6 +6,7 @@ const Profile = require('../models/profileModel');
 const jwt = require('jsonwebtoken');
 const { passwordUpdated } = require('../mail/template/passwordUpdate');
 const mailSender = require('../util/mailSender');
+const otpTemplate = require('../mail/template/otpEmail');
 
 //sendOTP
 
