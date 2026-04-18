@@ -52,6 +52,11 @@ exports.sendOTP = async(req,res) => {
             otp
         })
 
+		await mailSender(
+            email,
+            "Verification Email",
+            otpTemplate(otp)
+       );
         return res.status(200).json({
             success:true,
             message:"OTP sent successfully",
